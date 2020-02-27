@@ -1,0 +1,378 @@
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  html {
+     font-size: 49.5%;
+  }
+  
+  body {
+     text-rendering: optimizeLegibility;
+     background: #cfd8dc;
+  }
+  
+  .container {
+     position: relative;
+     width: 100%;
+     max-width: 1440px;
+  
+  }
+  
+  /* form container */
+  .form__container {
+     position: relative;
+     max-width: 100%;
+     margin: 3rem auto; /* test purposes only - set to 0 */
+     background: #fff;
+     padding: 5rem 5rem 5rem 5rem;
+     border-radius: .6rem;
+     overflow: hidden;
+     box-shadow: 0 0 5rem rgba(0, 0, 0, 0.1);
+     /*box-shadow: 26px 33px 121px 0px rgba(0, 0, 0, 0.4);*/
+  }
+  
+  /* style the close btn */
+  .form__container .close {
+     
+     top: 2rem;
+     right: 2rem;
+  }
+  
+  .form__title {
+     color: #293948;
+     font-family: 'Varela Round', sans-serif;
+     font-weight: 600;
+     text-transform: uppercase;
+     text-align: center;
+     margin-bottom: 2rem;
+  }
+  
+  /* flexbox rows */
+  .form-row {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -webkit-flex-direction: column;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     -webkit-flex-wrap: nowrap;
+     -ms-flex-wrap: nowrap;
+     flex-wrap: nowrap;
+  }
+
+  textarea{
+      resize: none;
+      height:70px !important;
+  }
+  
+  /* make it reponsive */
+  @media (min-width: 700px) {
+     .form-row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+     }
+  }
+  
+  /* row spacing */
+  .form-control {
+     position: relative;
+     padding-left: 0.5rem;
+     padding-right: 0.5rem;
+     -webkit-box-flex: 1;
+     -webkit-flex-grow: 1;
+     -ms-flex-positive: 1;
+     flex-grow: 1;
+  }
+  
+  fieldset {
+     border: 0;
+     margin: 0;
+     padding: 0;
+     margin-bottom: 2rem;
+  }
+  
+  legend {
+     font-family: 'Varela Round', sans-serif;
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: .1rem;
+     font-size: 1.4rem;
+     color: #455a64;
+     display: block;
+     border: 0;
+     padding: 0;
+     margin-bottom: 2rem;
+     overflow: hidden;
+     position: relative;
+     width: 100%;
+  }
+  
+  
+  /* legend divider */
+  legend:after {
+     content: "";
+     width: 100%;
+     position: absolute;
+     height: 1px;
+     top: 0.5rem;
+     margin-left: 1rem;
+     background: #e8ecef;
+  }
+  
+  label {
+     color: #b0bec5; /*afc7da*/
+     display: block;
+     font-family: 'Varela Round', sans-serif;
+     font-size: 1.2rem;
+     letter-spacing: 0.035rem;
+     margin-bottom: .5rem;
+  }
+  
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="date"],
+  input[type="password"],
+  textarea,
+  select {
+     /* main */
+     display: block;
+     height: 5.3rem;
+     padding: .6rem 1rem; /* The 6px vertically centers text on FF */
+     width: 100%;
+     background-color: #fff;
+     border: .1rem solid #c7d6de; /*c7d6de*/
+     border-radius: .5rem;
+     outline: 0;
+     appearance: none;
+     box-shadow: 0;
+     box-shadow: none;  
+     /* typography */
+     font-family: 'Nunito', sans-serif;
+     font-weight: 400;
+     font-size: 1.5rem;
+     /*margin-bottom: 2rem;*/
+     text-align: left;
+     color: #141920;
+     line-height: normal;
+     /* transition */
+     transition: all 0.2s ease-in-out;
+     -webkit-transition: all 0.2s ease-in-out;
+  }
+  
+  select {
+     display: inline-block;
+     -webkit-appearance: none;
+     appearance: none;
+     -moz-appearance: window;
+     background: url(https://www.pigeonholelive.com/images/chevron-down.png) no-repeat;
+     background-size: 15px;
+     background-position: right 1.5rem center;
+     color: rgba(52, 72, 91, .3);
+     font-weight: 400;
+  }
+  
+  /* style the focus */
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="date"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+     border: .1rem solid #52a9fd;
+     /*ccdfee def0fe brand primary: 4083c4*/
+     outline: 0;
+  }
+  
+  /* style placeholder text */
+  input::-webkit-input-placeholder {
+     color: #34485b4d;
+  }
+  input::-moz-placeholder {
+     color: rgba(52, 72, 91, .3);
+  }
+  input:-moz-placeholder {
+     /* Older versions of Firefox */
+     color: rgba(52, 72, 91, .3);
+  }
+  input:-ms-input-placeholder {
+     color: rgba(52, 72, 91, .3);
+  }
+  
+  /* Remove awkward default styles on some inputs for iOS */
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="date"],
+  input[type="password"],
+  textarea {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+  }
+  input::-ms-clear, textarea::-ms-clear {
+    display: none;
+  }
+  button {
+     width: 200px;
+     height: 45px;
+     font-family: 'Varela Round', sans-serif;
+     font-size: 11px;
+     text-transform: uppercase;
+     letter-spacing: 1.5px;
+     font-weight: 500;
+     color: #fff;
+     background-color: #4083c4;
+     border: none;
+     border-radius: 45px;
+     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+     transition: all 0.3s ease 0s;
+     cursor: pointer;
+     outline: none;
+  }
+  button:hover {
+     background-color: #2EE59D;
+     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+     color: #fff;
+     transform: translateY(-7px);
+  }
+  .form__buttons {
+     background: #FFF;
+     text-align: center;
+     padding-top: 2rem;
+     padding-bottom: 2rem;
+  }
+
+  input[type="date"]{
+      color:#34485b4d;
+  }
+
+
+  /*MERGED CSS*/
+
+  /* GRID */
+  
+  .twelve { width: 100%; }
+  .eleven { width: 91.53%; }
+  .ten { width: 83.06%; }
+  .nine { width: 74.6%; }
+  .eight { width: 66.13%; }
+  .seven { width: 57.66%; }
+  .six { width: 49.2%; }
+  .five { width: 40.73%; }
+  .four { width: 28.26%; }
+  .three { width: 23.8%; }
+  .two { width: 15.33%; }
+  .one { width: 6.866%; }
+
+  /* CLEARFIX */
+  
+  .cf:before,
+  .cf:after {
+      content: " ";
+      display: table;
+  }
+  
+  .cf:after {
+      clear: both;
+  }
+  
+  .cf {
+      *zoom: 1;
+  }
+  
+  input[type="checkbox"]{
+   display: none;
+ }
+
+  input[type="checkbox"] + label{
+   display: block;
+   border: 1px solid #ccc;
+   width: 100%;
+   max-width: 60%;
+   padding: 10px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   cursor: pointer;
+   position: relative;
+ }
+
+ input[type="checkbox"] + label:before{
+   content: "\2713";
+   position: absolute;
+   right: -10px;
+   top: -10px;
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   border-radius: 100%;
+   background-color: #3498db;
+   color: #fff;
+   display: none;
+ }
+
+ input[type="checkbox"]:checked + label:before {
+   display: block;
+   font-size: medium;
+   padding-left: 8px;
+ }
+
+ input[type="checkbox"] + label h4{
+   margin: 8px;
+   color: #ccc;
+ }
+
+ input[type="checkbox"]:checked + label{
+   border: 1px solid #3498db;
+ }
+
+ input[type="checkbox"]:checked + label h4{
+   color: #3498db;
+ }
+
+ /* COLUMNS */
+  
+ .col {
+   display: block;
+   float:left;
+   margin: 0 0 0 -10.4%;
+}
+
+.col:first-of-type {
+ margin-left: 0;
+}
+
+.container{
+ width: 100%;
+ max-width: 1000px;
+ margin: 0 auto;
+ position: relative;
+}
+
+.rw{
+   padding: 20px 0;
+ }
